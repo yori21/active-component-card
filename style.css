@@ -1,0 +1,345 @@
+/*CSS Reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Style CSS*/
+
+:root {
+  --verydarkgrayishblue: hsl(217, 19%, 35%);
+  --desaturateddarkblue: hsl(214, 17%, 51%);
+  --grayishblue: hsl(212, 23%, 69%);
+  --lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  background-color: var(--lightgrayishblue);
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  margin: 5rem auto;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.text {
+  padding: 2.5rem 2.4rem 10px;
+}
+
+h1,
+p.desk {
+  margin-bottom: 2rem;
+}
+
+.text h1 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  color: var(--verydarkgrayishblue);
+}
+
+.text p.desk {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--desaturateddarkblue);
+}
+
+.text .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.text .profile .name-date {
+  display: flex;
+  align-items: center;
+  line-height: 1.2rem;
+}
+
+.profile .name-date .name {
+  color: var(--verydarkgrayishblue);
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.profile .name-date .date {
+  font-size: 0.9rem;
+  color: var(--desaturateddarkblue);
+}
+
+.text .profile #link-share {
+  background-image: url(./images/icon-share.svg);
+  display: block;
+  width: 15px;
+  height: 13px;
+}
+
+.text .profile .pad-icon {
+  background-color: var(--lightgrayishblue);
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.profile .pad-icon:hover {
+  background-color: var(--grayishblue);
+}
+
+.profile .pad-icon::after {
+  background-color: var(--lightgrayishblue);
+}
+
+.other p {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.other .fb {
+  background-image: url(./images/icon-facebook.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.other .tweet {
+  background-image: url(./images/icon-twitter.svg);
+  display: block;
+  width: 20px;
+  height: 17px;
+}
+
+.other .pint {
+  background-image: url(./images/icon-pinterest.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.other p,
+span {
+  margin: 0.5rem 0.8rem;
+}
+
+.other {
+  position: absolute;
+  bottom: 1000px;
+  width: 100%;
+  height: 10%;
+  padding-right: 10rem;
+  box-sizing: border-box;
+  color: var(--grayishblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--verydarkgrayishblue);
+}
+
+.other.active {
+  left: 0;
+  bottom: 0;
+}
+
+@media (min-width: 600px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    display: flex;
+    width: 950px;
+    margin: auto;
+    position: inherit;
+  }
+
+  img {
+    width: 45%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .text {
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .profile {
+    position: relative;
+  }
+
+  .profile .pad-icon:hover {
+    background-color: var(--verydarkgrayishblue);
+  }
+
+  .profile .pad-icon::after {
+    background-color: var(--lightgrayishblue);
+  }
+
+  .other {
+    top: -1000px;
+    width: 250px;
+    height: 50px;
+    padding-right: 0;
+    border-radius: 0.5rem;
+  }
+
+  .other.active {
+    top: -63px;
+    left: 302px;
+  }
+
+  .other.active::before {
+    content: "";
+    position: absolute;
+    right: 40%;
+    bottom: -13px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid var(--verydarkgrayishblue);
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+  }
+}
