@@ -1,5 +1,5 @@
 const other = document.querySelector(".other");
 
-document.querySelector("#link-share").onclick = () => {
+document.querySelector("#share").onclick = () => {
   other.classList.toggle("active");
 };
